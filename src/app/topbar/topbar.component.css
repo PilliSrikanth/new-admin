@@ -1,0 +1,26 @@
+.main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .search-bar i{
+    font-size: 25px;
+  }
+  .search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .profile{
+    display: flex;
+    align-items: center;
+  }
+  .profile img {
+    border-radius: 50%;
+    margin-left: 10px;
+  }

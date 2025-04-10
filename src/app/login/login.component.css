@@ -1,0 +1,195 @@
+.body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background: linear-gradient(to bottom, #d3f0ea, white);
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.637);
+   /* border-radius: 20px;*/
+    border: 2px solid rgb(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    border-radius: 20px;
+    background: #4d9eea;
+}
+
+.left-panel {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    color: #D7DAFD;
+}
+
+.left-panel .content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description {
+    font-size: 30px;
+    font-weight: bold;
+    text-align:center ;
+    line-height:normal;
+    /* margin: 20px 0 10px; */
+}
+
+.sub-description {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 550;
+}
+
+.right-panel {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.303);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.logo {
+    font-family: 'Cursive';
+    text-align: center;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+.sign-in-btn {
+    background-color: #11949ea9;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.google-sign-in {
+    background-color: white;
+    color: #666;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-sign-in img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.create-account {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.input-box
+{
+    margin: 35px 0px;
+    width: 330px;
+    position: relative;
+}
+.input-box input{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 88%;
+    height: 40px;
+    padding: 0 35px 0 5px;
+    border-bottom: 2px solid white;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+}
+.input-box label
+{
+    font-weight: 400;
+    letter-spacing: .5px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: .5s;
+    z-index: -1;
+}
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+    top: -5px;
+}
+.input-box i{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 18px;
+}
+.error-message
+{
+    color: red;
+    font-size: 14px;
+    height: 0px;
+}
+.error-message-bottom
+{
+    color: red;
+    font-size: 14px;
+    height: 0px;
+    text-align: center;
+
+}

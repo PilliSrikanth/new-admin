@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="top-bar">
+    <h2>In Stock</h2>
+    <div class="actions">
+      <input
+        type="text"
+        placeholder="Quick search"
+        [(ngModel)]="searchTerm"
+        (input)="filterStocks()"
+      />
+      <button class="status">Status</button>
+    </div>
+  </div>
+
+  <!-- Uncomment this section if you want to allow new stock entry -->
+  <!--
+  <div class="add-stock-form">
+    <input type="text" placeholder="Product Name" [(ngModel)]="newStock.name">
+    <input type="number" placeholder="Barcode" [(ngModel)]="newStock.barcode">
+    <input type="number" placeholder="Price" [(ngModel)]="newStock.price">
+    <input type="number" placeholder="Quantity" [(ngModel)]="newStock.quantity">
+    <button (click)="addStock()">Add Stock</button>
+  </div>
+  -->
+
+  <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Barcode</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stock of filteredStocks">
+        <td>{{ stock.name }}</td>
+        <td>{{ stock.barcode }}</td>
+        <td>{{ stock.price }}</td>
+        <td>{{ stock.quantity }}</td>
+        <td>{{ stock.totalQuantity }}</td>
+        <td>
+          <!-- Uncomment these if you want Add Quantity/Price -->
+          <!--
+          <input
+            class="input"
+            type="number"
+            placeholder="Quantity"
+            [(ngModel)]="stock.addQuantity"
+          />
+          <button class="button" (click)="addQuantity(stock)">Add Quantity</button>
+          <br />
+          <input
+            class="input"
+            type="number"
+            placeholder="Price"
+            [(ngModel)]="stock.addPrice"
+          />
+          <button class="button" (click)="addPrice(stock)">Add Price</button>
+          <br />
+          -->
+          <button class="button" (click)="deleteStock(stock._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

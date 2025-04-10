@@ -1,0 +1,51 @@
+<div class="body">
+    <div class="container">
+        <div class="left-panel">
+            <div class="content">
+                <p class="description">WELCOME TO SUPER MARKET</p>
+                <p class="sub-description">REGISTER AND LOGIN HERE TO START WORKING.<br>HAVE A GREAT DAY</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="login-container">
+                <h1 class="logo">REGISTER</h1>
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input formControlName="userName" type="text" placeholder="userName">
+                        <label>userName</label>
+                        <div *ngIf="loginForm.get('userName')?.invalid && (loginForm.get('userName')?.dirty || loginForm.get('userName')?.touched)" class="error-message">
+                            <div *ngIf="loginForm.get('userName')?.errors?.required">Email is required.</div>
+                            <div *ngIf="loginForm.get('userName')?.errors?.minlength">Email must be at least 3 characters long.</div>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input formControlName="email" type="text" placeholder="Email">
+                        <label>Email</label>
+                        <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="error-message">
+                            <div *ngIf="loginForm.get('email')?.errors?.required">Email is required.</div>
+                            <div *ngIf="loginForm.get('email')?.errors?.minlength">Email must be at least 3 characters long.</div>
+                        </div>
+                    </div>
+  
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input formControlName="password" type="password" placeholder="Password">
+                        <label>Password</label>
+                        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="error-message">
+                            <div *ngIf="loginForm.get('password')?.errors?.required">Password is required.</div>
+                            <div *ngIf="loginForm.get('password')?.errors?.minlength">Password must be at least 6 characters long.</div>
+                        </div>
+                    </div>
+  
+                    <button type="submit" class="sign-in-btn" [disabled]="loginForm.invalid">Sign in</button>
+                    <div class="error-message-bottom" *ngIf="loginError">{{ loginError }}</div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  

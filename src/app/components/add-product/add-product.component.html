@@ -1,0 +1,12 @@
+<div class="addproduct-container">
+  <h2>Add New Product</h2>
+  <div class="form-group">
+    <div>
+      <input type="text" placeholder="Product Name" [(ngModel)]="newStock.name">
+      <input type="number" placeholder="Barcode" [(ngModel)]="newStock.barcode">
+      <input type="number" placeholder="Price" [(ngModel)]="newStock.price">
+      <input type="number" placeholder="Quantity" [(ngModel)]="newStock.quantity">
+      <button (click)="addStock()">Add Stock</button>
+    </div>
+  </div>
+</div>
