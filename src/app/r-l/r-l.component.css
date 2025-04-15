@@ -95,3 +95,68 @@ form {
     font-size: 20px;
     width: 300px;
 }
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      width: 95%;
+      height: auto;
+      border-radius: 20px;
+      padding: 20px 0;
+    }
+  
+    .left-panel,
+    .right-panel {
+      width: 100%;
+      border-radius: 0;
+      padding: 20px;
+    }
+  
+    .right-panel {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  
+    .description {
+      font-size: 22px;
+    }
+  
+    .sub-description {
+      font-size: 14px;
+    }
+  
+    .logo {
+      font-size: 26px;
+    }
+  
+    .sign-in-btn {
+      padding: 17px 90px;
+      font-size: 18px;
+    }
+  
+    .input-box {
+      width: 90%;
+      margin: 25px auto;
+    }
+  
+    .input-box input {
+      width: 85%;
+    }
+  
+    .google-sign-in {
+      width: 90%;
+      margin: 10px auto;
+    }
+  
+    form {
+      align-items: center;
+    }
+  
+    h2 {
+      font-size: 16px;
+    }
+  
+    .arrow, .icon {
+      font-size: 18px;
+    }
+  }
+  
