@@ -30,4 +30,8 @@
     text-align: center;
     border-bottom: 1px solid #ddd;
   }
-  
+  @media (max-width: 470px) {
+    .top-bar{
+      width: 390px;
+    }
+  }

@@ -55,4 +55,8 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+  @media (max-width: 470px) {
+    .top-bar{
+      width: 390px;
+    }
+  }

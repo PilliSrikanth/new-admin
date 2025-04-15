@@ -36,4 +36,9 @@
     text-decoration: none;
   }
 
+  @media (max-width: 470px) {
+    .top-bar{
+      width: 390px;
+    }
+  }
   
