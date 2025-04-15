@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DashboardService {
-  private apiUrl = 'http://103.164.70.170:3002/api/dashboard'; // Change to your actual API URL
+  private apiUrl = 'https://new-supermarket-backend-new.onrender.com/api/dashboard'; // Change to your actual API URL
 
   constructor(private http: HttpClient) {}
 

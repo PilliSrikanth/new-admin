@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { AuthInterceptor } from './auth.interceptor';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     CommonModule,
-
+    MatSnackBarModule
   ],
   providers: [
     {

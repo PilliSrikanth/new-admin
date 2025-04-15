@@ -1,9 +1,11 @@
-<div class="top-nav">
+
+  <div class="top-nav">
     <div class="search-bar">
       <i class="fa-solid fa-bars" routerLink="/profile"></i>
     </div>
     <div class="profile">
-      <span>Anna Lee</span>
-      <img src="https://via.placeholder.com/40" alt="U">
+      <span>{{ vendorName }}</span>
+      <img [src]="vendorImage" alt="U">
     </div>
   </div>
+  

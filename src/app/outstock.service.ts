@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class OutstockService {
 
-  private apiUrl = 'http://localhost:3002/outstock/api/outstock'; // Replace with your actual API endpoint
+  private apiUrl = 'https://new-supermarket-backend-new.onrender.com/outstock/api/outstock'; // Replace with your actual API endpoint
 
   constructor(private http: HttpClient) {}
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddProductService } from 'src/app/add-product.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { InStockService } from 'src/app/in-stock-service.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { InStockService } from 'src/app/in-stock-service.service';
 })
 export class AddProductComponent implements OnInit {
   stocks: any[] = [];
+
   newStock = {
     name: '',
     barcode: '',
@@ -17,7 +18,12 @@ export class AddProductComponent implements OnInit {
     totalQuantity: 100
   };
 
-  constructor(private stockService: InStockService) {}
+  selectedImage: File | null = null;
+
+  constructor(
+    private stockService: InStockService,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.getStockList();
@@ -33,9 +39,33 @@ export class AddProductComponent implements OnInit {
     });
   }
 
+  onImageSelected(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      this.selectedImage = file;
+    }
+  }
+
   addStock(): void {
-    this.stockService.addStock(this.newStock).subscribe(() => {
-      this.getStockList();
+    const formData = new FormData();
+    formData.append('name', this.newStock.name);
+    formData.append('barcode', this.newStock.barcode.toString());
+    formData.append('price', this.newStock.price.toString());
+    formData.append('quantity', this.newStock.quantity.toString());
+    formData.append('totalQuantity', this.newStock.totalQuantity.toString());
+  
+    if (this.selectedImage) {
+      formData.append('image', this.selectedImage);
+    }
+  
+    this.stockService.addStock(formData).subscribe(() => {
+      // ✅ Show success message
+      this.snackBar.open('Stock added successfully!', 'Close', {
+        duration: 3000,
+        verticalPosition: 'top',
+      });
+  
+      // ✅ Reset form
       this.newStock = {
         name: '',
         barcode: '',
@@ -43,6 +73,10 @@ export class AddProductComponent implements OnInit {
         quantity: 0,
         totalQuantity: 100
       };
+      this.selectedImage = null;
+  
+      // ✅ Refresh stock list
+      this.getStockList();
     });
   }
 
@@ -81,4 +115,5 @@ export class AddProductComponent implements OnInit {
       this.getStockList();
     });
   }
+  
 }

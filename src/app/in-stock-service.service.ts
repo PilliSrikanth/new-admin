@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InStockService {
-  private apiUrl = 'http://localhost:3002/stock/stocks'; // Replace with your actual API endpoint
-  private baseUrl = 'http://localhost:3002/api/products';
+  private apiUrl = 'https://new-supermarket-backend-new.onrender.com/stock/stocks'; // Replace with your actual API endpoint
+  private baseUrl = 'https://new-supermarket-backend-new.onrender.com/api/products';
 
   constructor(private http: HttpClient) {}
 
