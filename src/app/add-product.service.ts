@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AddProductService {
 
-  private apiUrl = 'http://103.164.70.170:3002/products'; // Replace with your API endpoint
+  private apiUrl = 'https://new-supermarket-backend-new.onrender.com/products'; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
 

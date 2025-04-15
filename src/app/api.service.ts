@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  private baseUrl = 'http://localhost:3002';
+  private baseUrl = 'https://new-supermarket-backend-new.onrender.com';
   
   constructor(private http: HttpClient) { }
 
